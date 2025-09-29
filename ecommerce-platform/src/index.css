@@ -1,13 +1,33 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Container to center content */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e0f0ff, #ffe0e0);
+  min-height: 100vh;
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* playful bubbly font */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Bubbly text style */
+.bubbly-text {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #0047ab; /* deep blue */
+  text-shadow:
+    3px 3px 0 #ff4c4c,  /* red shadow */
+    6px 6px 0 #002f6c;  /* darker blue shadow */
+  letter-spacing: 0.1em;
+  user-select: none;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+/* Optional: animate bubbly effect on hover */
+.bubbly-text:hover {
+  transform: scale(1.1) rotate(-3deg);
+  text-shadow:
+    4px 4px 0 #ff1a1a,
+    8px 8px 0 #001f4d;
 }

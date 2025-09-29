@@ -1,6 +1,6 @@
 import React from 'react';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "/components/ui/card";
-import { Button } from "/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../components/ui/card";
+import { Button } from "../components/ui/button";
 import { CartItem } from '../types';
 
 interface ShoppingCartProps {
@@ -29,7 +29,7 @@ export const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems, onUpdateQ
                 </div>
                 <div className="flex items-center space-x-2">
                   <Button 
-                    size="sm" 
+                    //size="sm" 
                     variant="outline" 
                     onClick={() => onUpdateQuantity(item.product.id, item.quantity - 1)}
                     disabled={item.quantity <= 1}
@@ -38,7 +38,7 @@ export const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems, onUpdateQ
                   </Button>
                   <span className="w-8 text-center">{item.quantity}</span>
                   <Button 
-                    size="sm" 
+                    //size="sm" 
                     variant="outline" 
                     onClick={() => onUpdateQuantity(item.product.id, item.quantity + 1)}
                   >
